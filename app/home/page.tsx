@@ -22,11 +22,11 @@ const home = () => {
                             </div>
                             <p className="text-sm my-4 text-white">
                                 At SG Signature Group, our experienced team is dedicated to helping you find your dream home or investment property.
-                                Whether you're buying, selling, or renting, we have the knowledge and resources to help you achieve your real estate goals.
+                                Whether you are buying, selling, or renting, we have the knowledge and resources to help you achieve your real estate goals.
                                 Contact us today to learn more.
                                 <br/>
                                 <br/>
-                                Whether you're buying, selling, or renting, we have the knowledge and resources to help you achieve your real estate goals.
+                                Whether you are buying, selling, or renting, we have the knowledge and resources to help you achieve your real estate goals.
                                 Contact us today to learn more.
                                 <br/>
                             </p>
