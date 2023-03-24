@@ -6,6 +6,7 @@ import {usePathname} from "next/navigation";
 
 const Header = (props: any) => {
     const router = usePathname();
+    console.log('router', router)
     const commonSpanClass = 'block absolute h-0.5 w-full bg-white transition-all duration-700 ease-in-out';
     const [navbar, setNavbar] = useState(false);
     const [open, setOpen] = useState(false);
@@ -13,7 +14,7 @@ const Header = (props: any) => {
         {
             id: 1,
             title: 'Home',
-            url: '/home'
+            url: 'home'
         },
         {
             id: 2,
@@ -99,7 +100,7 @@ const Header = (props: any) => {
                     <ul className="flex justify-between space-x-2">
                         {menuOptions.map((data) => {
                             return <Link href={data.url} key={data.id}
-                                            className={`${data.url === router.toString() ? 'text-white bg-yellow-700' : 'text-yellow-600'} hover:text-white hover:bg-yellow-700 w-24 md:w-32 text-center transition-all ease-in-out duration-700 rounded-md py-px font-semibold uppercase text-xs md:text-base`}>{data.title}</Link>
+                                            className={`${'/' + data.url === router.toString() ? 'text-white bg-yellow-700' : 'text-yellow-600'} hover:text-white hover:bg-yellow-700 w-24 md:w-32 text-center transition-all ease-in-out duration-700 rounded-md py-px font-semibold uppercase text-xs md:text-base`}>{data.title}</Link>
                         })}
                     </ul>
                 </div>
