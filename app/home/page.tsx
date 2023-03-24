@@ -47,7 +47,7 @@ const home = () => {
                                 {/*<br/>*/}
                             </p>
                             <button
-                                className="bg-yellow-600 hover:bg-yellow-700 text-white w-32 rounded py-1.5 uppercase tracking-widest text-sm font-semibold">
+                                className="bg-yellow-600 hover:bg-yellow-700 text-white w-40 rounded py-1.5 uppercase tracking-widest text-sm font-semibold">
                                 Contact Us
                             </button>
                         </div>
