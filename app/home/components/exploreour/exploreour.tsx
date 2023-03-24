@@ -4,13 +4,13 @@ import Image from "next/image";
 const Exploreour = () => {
     return (
         <div className="grid grid-cols-12 gap-0 mt-8 px-2 sm:px-12 2xl:px-40">
-            <div className="col-span-3 h-px bg-gray-500 my-auto"></div>
+            <div className="col-span-3 h-px bg-yellow-600 my-auto"></div>
             <div className="col-span-6">
                 <h1 className="text-center uppercase tracking-wider font-mono text-2xl font-semibold">
                     Explore our residential projects
                 </h1>
             </div>
-            <div className="col-span-3 h-px bg-gray-500 my-auto"></div>
+            <div className="col-span-3 h-px bg-yellow-600 my-auto"></div>
             <div className="col-span-12 my-10">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="col-span-1 md:col-span-2 relative cursor-pointer group overflow-hidden">
