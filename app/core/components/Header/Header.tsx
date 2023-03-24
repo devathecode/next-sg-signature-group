@@ -2,8 +2,10 @@
 import React, {useEffect, useState} from 'react';
 import Image from "next/image";
 import Link from "next/link";
+import {usePathname} from "next/navigation";
 
 const Header = (props: any) => {
+    const router = usePathname();
     const commonSpanClass = 'block absolute h-0.5 w-full bg-white transition-all duration-700 ease-in-out';
     const [navbar, setNavbar] = useState(false);
     const [open, setOpen] = useState(false);
@@ -15,13 +17,13 @@ const Header = (props: any) => {
         },
         {
             id: 2,
-            title: 'Properties',
+            title: 'Projects',
             url: 'home/properties'
         },
         {
             id: 3,
-            title: 'Projects',
-            url: 'home/projects'
+            title: 'About Us',
+            url: 'home/about'
         },
         {
             id: 4,
@@ -48,6 +50,10 @@ const Header = (props: any) => {
         }
     }
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    };
+
     useEffect(() => {
         changeBackground()
         // adding the event when scroll change background
@@ -55,7 +61,17 @@ const Header = (props: any) => {
     })
     return (
         <nav
-            className={`px-2 sm:px-12 2xl:px-40 fixed top-0 left-0 right-0 bottom-auto z-50 ${navbar ? 'bg-white border-b-2 border-yellow-700 py-1' : 'py-1.5 sm:py-2.5'}`}>
+            className={`px-2 sm:px-12 2xl:px-40 fixed top-0 left-0 right-0 bottom-auto z-50
+             ${navbar ? 'bg-white border-b-2 border-yellow-700 py-1' : 'py-1.5 sm:py-2.5'}`}>
+            <button
+                onClick={scrollToTop}
+                className={`fixed bottom-4 right-4 bg-yellow-600 text-white rounded-full p-3 shadow-lg
+                 focus:outline-none hover:bg-yellow-700 transition-all ease-in-out duration-700 flex justify-center items-center ${navbar ? 'opacity-100' : 'opacity-0'}`}>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-6 w-6">
+                    <path fill-rule="evenodd" d="M10 6.586l-4.95 4.95-1.414-1.414L10 3.758l6.364 6.364-1.414 1.414z"
+                          clip-rule="evenodd"/>
+                </svg>
+            </button>
             <div className="grid grid-cols-12 gap-0 sm:gap-2 md:gap-4 lg:gap-6 xl:gap-8">
                 <div className="col-span-9 sm:col-span-3 justify-self-start my-auto">
                     <Link href="/home" className="flex flex-row cursor-pointer justify-center items-center text-white font-mono text-2xl font-bold">
@@ -81,10 +97,10 @@ const Header = (props: any) => {
                     </div>
                 </div>
                 <div className="col-span-2 sm:col-span-9 place-self-end cursor-pointer hidden sm:block my-auto">
-                    <ul className="flex justify-between space-x-8">
+                    <ul className="flex justify-between space-x-2">
                         {menuOptions.map((data) => {
                             return <Link href={data.url} key={data.id}
-                                            className={`text-yellow-600 font-semibold uppercase text-xs sm:text-sm md:text-base`}>{data.title}</Link>
+                                            className={`${data.url === router.toString() ? 'text-white bg-yellow-700' : 'text-yellow-600'} hover:text-white hover:bg-yellow-700 w-32 text-center transition-all ease-in-out duration-700 rounded-md py-px font-semibold uppercase text-xs sm:text-sm md:text-base`}>{data.title}</Link>
                         })}
                     </ul>
                 </div>

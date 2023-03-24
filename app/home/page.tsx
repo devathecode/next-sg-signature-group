@@ -1,5 +1,6 @@
 import React from 'react';
 import Image from "next/image";
+import Exploreour from "@/app/home/components/exploreour/exploreour";
 
 const home = () => {
     return (
@@ -36,6 +37,7 @@ const home = () => {
                         </div>
                     </div>
                 </div>
+                <Exploreour/>
             </div>
         </>
     );
