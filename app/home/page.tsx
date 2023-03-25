@@ -6,7 +6,7 @@ const home = () => {
     return (
         <>
             <div className="relative">
-                <Image width="1000" height="500"
+                <Image priority={true} width="1000" height="500"
                        className="h-[40rem] 2xl:h-[48rem] object-cover w-full blur-[2px]"
                        src="/images/main-omg.jpeg" alt="main image"/>
                 <div className="absolute top-10 px-2 sm:px-12 2xl:px-40 py-20 lg:py-24 xl:py-32">

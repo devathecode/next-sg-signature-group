@@ -6,7 +6,6 @@ import {usePathname} from "next/navigation";
 
 const Header = (props: any) => {
     const router = usePathname();
-    console.log('router', router)
     const commonSpanClass = 'block absolute h-0.5 w-full bg-white transition-all duration-700 ease-in-out';
     const [navbar, setNavbar] = useState(false);
     const [open, setOpen] = useState(false);
