@@ -22,7 +22,7 @@ const home = () => {
                                 <br/>
                                 <span className="italic text-xs text-white">Group</span>
                             </div>
-                            <p className="text-sm my-4 text-black">
+                            <p className="text-sm my-4 text-white">
                                 At SG Signature Group, our experienced team is dedicated to helping you find your dream
                                 home or investment property.
                                 Whether you are buying, selling, or renting, we have the knowledge and resources to help
@@ -30,24 +30,10 @@ const home = () => {
                                 <br/>
                                 <br/>
                                 Contact us today to learn more.
-                                {/*<br/>*/}
-                                {/*<br/>*/}
-                                {/*In addition to our expertise in real estate transactions, we also offer a variety of*/}
-                                {/*valuable services to assist our clients. Our team can provide you with market analysis*/}
-                                {/*reports, neighborhood profiles, and personalized advice to help you make informed*/}
-                                {/*decisions.*/}
-                                {/*<br/>*/}
-                                {/*<br/>*/}
-                                {/*We also have partnerships with leading industry professionals such as*/}
-                                {/*mortgage brokers, home inspectors, and contractors to ensure that your buying or selling*/}
-                                {/*process is as smooth and stress-free as possible. At SG Signature Group, we are*/}
-                                {/*committed to providing exceptional customer service and building long-lasting*/}
-                                {/*relationships with our clients. Contact us today to start your real estate journey with*/}
-                                {/*a team you can trust.*/}
-                                {/*<br/>*/}
                             </p>
                             <button
-                                className="bg-yellow-600 hover:bg-yellow-700 text-white w-40 rounded py-1.5 uppercase tracking-widest text-sm font-semibold">
+                                className="border-2 border-black font-bold uppercase w-36 py-1.5
+                                 rounded-md shadow-2xl bg-black text-white hover:shadow-lg transition-all ease-in-out duration-700">
                                 Contact Us
                             </button>
                         </div>

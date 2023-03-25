@@ -3,9 +3,9 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <div className="bg-gray-50 py-10">
-            <div className="grid grid-cols-12 max-w-6xl mx-auto">
-                <div className="col-span-6">
+        <div className="bg-gray-50 py-10 px-2 sm:px-12 2xl:px-40">
+            <div className="grid grid-cols-12 gap-2 max-w-6xl mx-auto">
+                <div className="col-span-12 md:col-span-6">
                     <div className="mb-4 font-mono flex flex-row items-center">
                         <Image width="200" height="80" src="/images/sg-logo2.png" className="w-10 md:w-12 h-auto" alt=""/>
                         <div className="flex flex-col">
@@ -21,8 +21,8 @@ const Footer = () => {
                         Infront of Post Office, Gorakhpur-273017
                     </div>
                 </div>
-                <div className="col-span-6 place-self-end">
-                    <h1 className="font-medium text-lg text-yellow-600 mb-4">Subscribe to our Newsletter</h1>
+                <div className="col-span-12 md:col-span-6 md:place-self-end">
+                    <h1 className="font-medium text-lg text-gray-700 mb-4">Subscribe to our Newsletter</h1>
                     <form className="mt-4">
                         <input
                             className="border rounded w-full px-4 py-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
