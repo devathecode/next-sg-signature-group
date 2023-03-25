@@ -66,6 +66,8 @@ const Header = (props: any) => {
              ${navbar ? 'bg-white border-b-2 border-yellow-700 py-1' : 'py-1.5 sm:py-2.5'}`}>
             <button
                 onClick={scrollToTop}
+                role="button"
+                aria-label="gototop"
                 className={`fixed bottom-4 right-4 bg-yellow-600 text-white rounded-full p-3 shadow-lg
                  focus:outline-none hover:bg-yellow-700 transition-all ease-in-out duration-700 flex justify-center items-center ${navbar ? 'opacity-100' : 'opacity-0'}`}>
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-6 w-6">
@@ -99,8 +101,11 @@ const Header = (props: any) => {
                 <div className="col-span-2 sm:col-span-9 place-self-end cursor-pointer hidden md:block my-auto">
                     <ul className="flex justify-between space-x-2">
                         {menuOptions.map((data) => {
-                            return <Link href={data.url} key={data.id}
-                                            className={`${'/' + data.url === router.toString() ? 'text-white bg-yellow-700' : 'text-yellow-600'} hover:text-white hover:bg-yellow-700 w-24 md:w-32 text-center transition-all ease-in-out duration-700 rounded-md py-px font-semibold uppercase text-xs md:text-base`}>{data.title}</Link>
+                            return <li  key={data.id}>
+                                <Link href={data.url}
+                                      className={`${'/' + data.url === router.toString() ? 'text-white bg-yellow-700' : 'text-yellow-600'} hover:text-white hover:bg-yellow-700
+                                             w-24 md:w-32 text-center transition-all ease-in-out duration-700 rounded-md py-px font-semibold uppercase text-xs md:text-base`}>{data.title}</Link>
+                            </li>
                         })}
                     </ul>
                 </div>
@@ -109,8 +114,12 @@ const Header = (props: any) => {
                 className={`${open ? 'active left-0 block' : '-left-[200%]'} fixed z-50 top-12 w-full transition-all duration-700 bg-white h-full border-t-2 border-gray-400`}>
                 <ul className="grid grid-cols-12 gap-0 sm:gap-5 gap-y-7 place-items-center mt-12">
                     {menuOptions.map((data) => {
-                        return <Link href={data.url} onClick={closeHamburger} key={data.id}
-                                        className={`${data.url === router.toString() ? 'text-white bg-yellow-700' : 'text-yellow-600'} col-span-12 hover:text-white hover:bg-yellow-700 w-full text-center transition-all ease-in-out duration-700 py-px font-semibold font-semibold uppercase`}>{data.title}</Link>
+                        return <li key={data.id}>
+                            <Link href={data.url} onClick={closeHamburger}
+                                  className={`${data.url === router.toString() ? 'text-white bg-yellow-700' : 'text-yellow-600'} col-span-12
+                                         hover:text-white hover:bg-yellow-700 w-full text-center transition-all ease-in-out duration-700 py-px font-semibold 
+                                         font-semibold uppercase`}>{data.title}</Link>
+                        </li>
                     })}
                 </ul>
             </div>

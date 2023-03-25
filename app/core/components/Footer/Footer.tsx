@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Footer = () => {
     return (
-        <div className="bg-gray-100 py-10">
+        <div className="bg-gray-50 py-10">
             <div className="grid grid-cols-12 max-w-6xl mx-auto">
                 <div className="col-span-6">
                     <div className="mb-4 font-mono flex flex-row items-center">
@@ -22,7 +22,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="col-span-6 place-self-end">
-                    <h3 className="font-medium text-lg text-yellow-600 mb-4">Subscribe to our Newsletter</h3>
+                    <h1 className="font-medium text-lg text-yellow-600 mb-4">Subscribe to our Newsletter</h1>
                     <form className="mt-4">
                         <input
                             className="border rounded w-full px-4 py-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
